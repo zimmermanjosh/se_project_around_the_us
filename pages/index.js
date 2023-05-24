@@ -1,3 +1,4 @@
+
 ///////////////////////////////////
 // initialize the app with data //
 ///////////////////////////////////
@@ -90,9 +91,9 @@ const modalInputs = Array.from(
 );
 
 /* event Listeners */
-/*initializeCards.forEach((elementData) => {
+initializeCards.forEach((elementData) => {
   renderElement(elementData);
-});*/
+});
 
 elementImageModal.addEventListener("mousedown", handlePopupClose);
 
@@ -132,7 +133,7 @@ function handlePopupClose(evt) {
   }
 }
 
-/*function getElementView(elementData) {
+function getElementView(elementData) {
   const elementCardTemp = elementTemplate.cloneNode(true);
   const imageElement = elementCardTemp.querySelector(".element__img");
   const titleElement = elementCardTemp.querySelector(".element__text");
@@ -141,9 +142,9 @@ function handlePopupClose(evt) {
     ".element__delete-button"
   );
 
-  //likeButton.addEventListener("click", () => {
-  //  likeButton.classList.toggle("element__like-button_active");
-  //});
+  likeButton.addEventListener("click", () => {
+    likeButton.classList.toggle("element__like-button_active");
+  });
 
   elementDeleteButton.addEventListener("click", () => elementCardTemp.remove());
 
@@ -158,7 +159,7 @@ function handlePopupClose(evt) {
     openModal(elementImageModal);
   });
   return elementCardTemp;
-}*/
+}
 
 function handleElementImageModal(evt) {
   evt.preventDefault();
@@ -173,9 +174,9 @@ function handleElementImageModal(evt) {
   createButton.disabled = true;
 }
 
-/*function deleteElement(evt) {
+function deleteElement(evt) {
   evt.target.closest(".element").remove();
-}*/
+}
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
@@ -187,9 +188,9 @@ function closeModal(modal) {
   document.removeEventListener("keyup", handleEscKey);
 }
 
-/*function renderElement(elementData) {
+function renderElement(elementData) {
   elementGallery.prepend(getElementView(elementData));
-}*/
+}
 
 function handleProfileEditSubmit(evt) {
   evt.preventDefault();
